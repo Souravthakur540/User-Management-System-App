@@ -1,0 +1,17 @@
+<% for(var i = 0; i < results.results.length; i++) { %>
+<tr>
+    <td><%= i+1 %></td>
+    <td><%= results.results[i].name %></td>
+    <td><%= results.results[i].email %></td>
+    <td><%= results.results[i].gender %></td>
+    <td><%= results.results[i].status %></td>
+    <td>
+        <a href="/update-user?id=<%= results.results[i]._id%>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+        </a>
+        <a class="btn border-shadow delete" data-id=<%= results.results[i]._id%>>
+            <span class="text-gradient"><i class="fas fa-times"></i></span>
+        </a>
+    </td>
+</tr>
+<% } %>
